@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-submit Test Page</title>
+</head>
+<body>
+    <h1>Auto-submit Test Page</h1>
+    <!-- Form with Text Input -->
+    <form id="textForm" action="/submit" method="post">
+        <label for="textInput">Text Input (max 20 chars):</label>
+        <input type="text" id="textInput" name="textInput">
+    </form><br><br>
+
+    <!-- Form with Email Input -->
+    <form id="emailForm" action="/submit" method="post">
+        <label for="emailInput">Email Input (max 30 chars):</label>
+        <input type="email" id="emailInput" name="emailInput" maxlength="30">
+    </form><br><br>
+
+    <!-- Form with Password Input -->
+    <form id="passwordForm" action="/submit" method="post">
+        <label for="passwordInput">Password Input (max 16 chars):</label>
+        <input type="password" id="passwordInput" name="passwordInput" maxlength="16">
+    </form><br><br>
+
+    <!-- Form with Number Input -->
+    <form id="numberForm" action="/submit" method="post">
+        <label for="numberInput">Number Input (max 3 digits):</label>
+        <input type="number" id="numberInput" name="numberInput" maxlength="3">
+    </form><br><br>
+
+    <!-- Form with Textarea -->
+    <form id="textareaForm" action="/submit" method="post">
+        <label for="textareaInput">Textarea Input (max 50 chars):</label>
+        <textarea id="textareaInput" name="textareaInput" maxlength="50"></textarea>
+    </form><br><br>
+
+    <!-- Form with Select -->
+    <form id="selectForm" action="/submit" method="post">
+        <label for="selectInput">Select Input:</label>
+        <select id="selectInput" name="selectInput">
+            <option value="">Select an option</option>
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select>
+    </form><br><br>
+
+    <!-- Form with Checkbox -->
+    <form id="checkboxForm" action="/submit" method="post">
+        <label for="checkboxInput">Checkbox Input:</label>
+        <input type="checkbox" id="checkboxInput" name="checkboxInput">
+    </form><br><br>
+
+    <!-- Form with Radio Buttons -->
+    <form id="radioForm" action="/submit" method="post">
+        <label for="radioInput1">Radio Input 1:</label>
+        <input type="radio" name="radioGroup" id="radioInput1" value="radio1"><br>
+        <label for="radioInput2">Radio Input 2:</label>
+        <input type="radio" name="radioGroup" id="radioInput2" value="radio2">
+    </form><br><br>
+
+    <script>
+        document.querySelectorAll('input[maxlength], textarea[maxlength]').forEach(input => {
+            input.addEventListener('input', (event) => {
+                if (event.target.value.length >= event.target.maxLength) {
+                    event.target.form.submit();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

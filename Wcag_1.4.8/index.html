@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="/library/bundle.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adjust Spacing</title>
+    <style>
+      body {
+        line-height: 2px;
+        margin: 20px;
+        font-family: Arial, sans-serif;
+        transition: line-height 0.5s, margin 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Adjust Spacing Example</h1>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ligula
+      in ligula lobortis luctus id eget sapien. Curabitur lacinia justo et
+      vestibulum semper. Suspendisse potenti.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ligula
+      in ligula lobortis luctus id eget sapien. Curabitur lacinia justo et
+      vestibulum semper. Suspendisse potenti.
+    </p>
+
+    <button id="increaseSpacingButton" onclick="increaseSpacing()">
+      Increase Spacing
+    </button>
+    <a href="#" id="increaseSpacingLink" onclick="increaseSpacing()"
+      >Increase Spacing (Link)</a
+    >
+    <button id="nonAdjustingButton">Non-Adjusting Button</button>
+
+    <script>
+      function increaseSpacing() {
+        const body = document.body;
+        const currentLineHeight = parseFloat(
+          window.getComputedStyle(body).lineHeight
+        );
+        const currentMargin = parseFloat(window.getComputedStyle(body).margin);
+        // Increase line height and margin
+        body.style.lineHeight = currentLineHeight * 1.1;
+        body.style.margin = currentMargin * 1.2 + 'px';
+      }
+    </script>
+     <script>
+
+      Audit.engine.ruleEngine(null,null,null,document)
+
+  </script>
+  </body>
+</html>

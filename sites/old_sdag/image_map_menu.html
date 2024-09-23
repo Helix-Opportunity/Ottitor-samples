@@ -1,0 +1,34 @@
+<nav role="navigation">
+	<img id="sdag_logo" src="images/SDAG_logo.png">
+	<div id="navigation_menu" >
+		<img id="menu_image" src="images/menu_image.png" width="974" height="1856" orgWidth="974" orgHeight="1856" usemap="#menu_map" alt="" />
+		<map name="menu_map" role="menubar" id="menu_map">
+			<area shape="rect" coords="972,1854,974,1856" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_24226" />
+			<area id="home_link" role="button" class="map_link" alt="Home link" title="Home" href="#" shape="poly" coords="458,131,521,13,899,14,955,131,899,249,519,250" style="outline:none;" target="_self"     />
+			<area id="samples_link" role="button" class="map_link" alt="Samples link" title="Samples" href="#" shape="poly" coords="19,496,79,378,456,379,515,496,455,616,78,615" style="outline:none;" target="_self"/>
+			<area id="software_link" role="button" class="map_link" alt="Software link" title="Software" href="#" shape="poly" coords="460,862.5,520,745.5,898,743.5,956,862.5,899,980.5,519,980.5" style="outline:none;" target="_self"/>
+			<area id="events_link" role="button" class="map_link"alt="Events link" title="Events" href="#" shape="poly" coords="20,1227.25,79,1110.25,455,1109.25,514,1225.25,454,1347.25,79,1347.25" style="outline:none;" target="_self"/>
+			<area id="academic_link" role="button" class="map_link" alt="Academic Info link" title="Academic_Menu" href="#" shape="poly" coords="79,1597.5,455,1597.5,514,1715.5,455,1832.5,78,1832.5,19,1713.5" style="outline:none;" target="_self"/>
+		</map>
+	</div>
+</nav>
+<script type="text/javascript">
+	$("#menu_image").mapster({
+		fillOpacity: 0.4,
+		isSelectable:false,
+		mapKey: 'id',
+		onClick:function (e) {loadContent(e.key)},
+		areas:[{
+			key:'home_link',
+			fillColor:"FF0000"
+		},{	key:"samples_link",
+			fillColor:"33CC33"
+		},{	key:"software_link",
+			fillColor: "0066CC"
+		},{	key:"events_link",
+			fillColor: "FF6600"
+		},{	key:'academic_link',
+			fillColor: "CC00CC"
+		}]
+	});
+</script>

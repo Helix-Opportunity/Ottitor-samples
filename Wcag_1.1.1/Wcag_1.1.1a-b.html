@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image as input</title>
+</head>
+<body>
+      <!-- Image -->
+      <div>
+        <h1>With alt</h1>
+        <div>
+          <button type="button">
+            <img src="./Images/button-image.png" alt="Image button" />
+          </button>
+        </div>
+      </div>
+        <h1>With title</h1>
+        <button type="button">
+          <img src="./Images/button-image.png" title="Image button" />
+        </button>
+      </div>
+
+      <div>
+        <h1>With aria-label</h1>
+        <button type="button">
+          <img src="./Images/button-image.png" aria-label="Image button" />
+        </button>
+      </div>
+
+      <div>
+        <h1>With aria-labelledby</h1>
+        <button type="button">
+          <img src="./Images/button-image.png" aria-labelledby="imgname" />
+        </button>
+        <label id="imgname">Button</label>
+      </div>
+
+      <div>
+        <h1>Without attribute</h1>
+        <button type="button">
+          <img src="./Images/button-image.png" />
+        </button>
+      </div>
+</body>
+</html>

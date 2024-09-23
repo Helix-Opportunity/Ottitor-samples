@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wcag_1.3.1</title>
+</head>
+<body>
+  <!--non semantic elements without aria-label but having role as attr-->
+  <div role="search"> search functionality here </div>
+  <!--non semantic elements without role and aria-label-->
+  <div>search</div>
+  <!--non semantic elements same aria-labelledBy attr and role-->
+  <div aria-labelledby="site-nav-heading" role="navigation">
+    <h2 id="site-nav-heading">Site</h2>
+    <ul>
+      <li><a href="#">nav link 1</a></li>
+      <li><a href="#">nav link 2</a></li>
+      <li><a href="#">nav link 3</a></li>
+    </ul>
+  </div>
+  <div aria-labelledby="site-nav-heading" role="navigation">
+    <h2 id="site-nav-heading">Related Topics</h2>
+      <ul>
+        <li><a href="...">topic link 1</a></li>
+        <li><a href="...">topic link 2</a></li>
+        <li><a href="...">topic link 3</a></li>
+      </ul>
+  </div>
+  <!--non semantic elements different aria-labelledBy attr and same role-->
+  <div aria-labelledby="siteHave-nav-heading" role="navigation">
+    <h2 id="siteHave-nav-heading">Site</h2>
+    <ul>
+      <li><a href="#">nav link 1</a></li>
+      <li><a href="#">nav link 2</a></li>
+      <li><a href="#">nav link 3</a></li>
+    </ul>
+  </div>
+  <div aria-labelledby="siteCane-nav-heading" role="navigation">
+    <h2 id="siteCane-nav-heading">Related Topics</h2>
+      <ul>
+        <li><a href="...">topic link 1</a></li>
+        <li><a href="...">topic link 2</a></li>
+        <li><a href="...">topic link 3</a></li>
+      </ul>
+  </div>
+  <!--semantic elements with no aria-label-->
+  <main> the page's main content here </main>
+  <!--semantic elements with aria-labelledBy attr (TestCase Passed)-->
+  <nav aria-labelledby="site-nav1-heading">
+    <h2 id="site-nav1-heading">Site</h2>
+    <ul>
+      <li><a href="/news">News</a></li>  
+      <li><a href="/weather">Weather</a></li>
+      <li><a href="/sport">Sport</a></li>
+    </ul>
+  </nav>
+  <nav aria-labelledby="related-nav1-heading">
+    <h2 id="related-nav1-heading">Related Topics</h2>
+    <ul>
+      <li><a href="/local-news">Local News</a></li>
+      <li><a href="/local-weather">Local Weather</a></li>
+      <li><a href="/local-sport">Local Sport</a></li>
+    </ul>
+  </nav>
+  <!--semantic elements with non matching aria-labelledBy attr -->
+  <nav aria-labelledby="site-heading">
+    <h2 id="site2-heading">Site</h2>
+    <ul>
+      <li><a href="/news">News</a></li>  
+      <li><a href="/weather">Weather</a></li>
+      <li><a href="/sport">Sport</a></li>
+    </ul>
+  </nav>
+  <nav aria-labelledby="related-heading">
+    <h2 id="related-heading">Related Topics</h2>
+    <ul>
+      <li><a href="/local-news">Local News</a></li>
+      <li><a href="/local-weather">Local Weather</a></li>
+      <li><a href="/local-sport">Local Sport</a></li>
+    </ul>
+  </nav>
+  <table>
+    <caption>het</caption>
+    <thead>
+      <tr>
+        <th id="header1">Header 1</th>
+        <th id="header2">Header 2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td headers="header1">Data 1</td>
+        <td headers="header">Data 2</td> <!-- Referenced header is missing -->
+      </tr>
+    </tbody>
+  </table>
+  <h1>Main Heading</h1>
+  <p>Some content...</p>
+  <h2>Subheading 1</h2>
+  <p>Some content...</p>
+  <h2>Subheading 2</h2>
+  <p>Some content...</p>
+  <h4>Sub-subheading</h4>
+  <p>Some content...</p>
+  
+</body>
+</html>

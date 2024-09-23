@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Non-Text Content Examples</title>
+  </head>
+  <body>
+    <h1>Non-Text Content Examples</h1>
+
+    <!-- Image -->
+    <div>
+      <img
+        style="display: inline"
+        src="./Images/image.png"
+        alt="An example image"
+      />
+    </div>
+
+    <!-- Video -->
+    <div>
+      <video controls width="400" style="display: inline">
+        <source src="./Videos/Forgetful Kitchen - Ad.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Audio -->
+    <div>
+      <audio controls>
+        <source src="./Audios/Forgetful Kitchen - Ad.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <!-- SVG Image -->
+    <div>
+      <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" fill="blue" />
+      </svg>
+    </div>
+    <!-- Image as a button -->
+    <div>
+      <button type="button">
+        <img src="./Images/button-image.png" alt="Image button" />
+      </button>
+    </div>
+    <!-- Image as a link -->
+    <div>
+      <a href="https://google.com">
+        <img src="./Images/google.jpeg" alt="Linked image" />
+      </a>
+    </div>
+
+    <!-- Image maps with alt text and without alt text -->
+    <div>
+      <map name="image-map">
+        <area shape="rect" coords="0,0,50,50" alt="Area 1" href="#" />
+        <area shape="rect" coords="50,50,100,100" href="#" />
+      </map>
+      <img
+        src="./Images/flow1.png"
+        usemap="#image-map"
+        alt="Image map with alt text"
+      />
+    </div>
+    <div>
+      <img src="./Images/exp1.jpeg" usemap="#image-map" alt="" />
+    </div>
+
+    <div>
+      <!-- Linked images with and without alt text -->
+      <a href="https://www.amazon.com">
+        <img src="./Images/az.png" alt="Linked image 1" />
+      </a>
+      <a href="https://www.wikipedia.org/">
+        <img src="./Images/wiki.jpeg" alt="" />
+      </a>
+    </div>
+
+    <!-- Image as a form button -->
+    <div>
+      <form action="#" method="post">
+        <input
+          type="image"
+          src="./Images/button-image.png"
+          alt="Form button image"
+        />
+      </form>
+    </div>
+
+    <!-- Image as input type -->
+    <div>
+      <label>
+        <input type="image" src="./Images/login.jpg" alt="Image input" />
+      </label>
+    </div>
+
+    <!-- Frame and iframe with and without titles -->
+    <div>
+      <iframe src="https://www.google.com" title="Example Website"></iframe>
+    </div>
+    <div><iframe src="https://www.india.gov.in/" title=""></iframe></div>
+  </body>
+</html>
+s

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autofocus Test</title>
+</head>
+<body>
+    <h1>Autofocus Test</h1>
+
+    <!-- Text Input with Autofocus (max 10 chars) -->
+    <label for="textInput1">Text Input 1 (max 10 chars):</label>
+    <input type="text" id="textInput1" name="textInput1" maxlength="10"><br><br>
+
+    <!-- Text Input 2 (max 15 chars) -->
+    <label for="textInput2">Text Input 2 (max 15 chars):</label>
+    <input type="text" id="textInput2" name="textInput2" maxlength="15"><br><br>
+
+    <!-- Text Input 3 (max 8 chars) -->
+    <label for="textInput3">Text Input 3 (max 8 chars):</label>
+    <input type="text" id="textInput3" name="textInput3" maxlength="8"><br><br>
+
+    <!-- Script to handle autofocus and shift focus -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const inputs = document.querySelectorAll('input[maxlength]');
+            inputs.forEach((input, index) => {
+                input.addEventListener('input', () => {
+                    const maxLength = parseInt(input.getAttribute('maxlength'));
+                    if (input.value.length >= maxLength) {
+                        const nextIndex = index + 1;
+                        if (nextIndex < inputs.length) {
+                            inputs[nextIndex].focus();
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font Size Units Example</title>
+  <script src="/library/bundle.js"></script>
+  <!-- Internal CSS Styles -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+
+ 
+    p.percent-size {
+      font-size: 120%; /* Percent */
+    }
+
+    p.named-size {
+      font-size: large; /* Named size */
+    }
+
+    p.em-size {
+      font-size: 1.5em; /* em */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Inline CSS -->
+  <h1 style="font-size: 24px;">Heading with Inline Font Size (px)</h1>
+
+  <p class="percent-size">This paragraph has font size set in percentage.</p>
+
+  <p class="named-size">This paragraph has font size set with a named size.</p>
+
+  <p class="em-size">This paragraph has font size set in em units.</p>
+
+  <!-- JavaScript to check font size units -->
+ <script>
+
+Audit.engine.ruleEngine(null, Audit.browserParser, null, document);
+
+</script>
+</body>
+</html>

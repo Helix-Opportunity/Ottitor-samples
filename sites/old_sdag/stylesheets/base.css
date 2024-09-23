@@ -1,0 +1,84 @@
+body{
+	/*background-image: url("../images/background.jpg");*/
+}
+
+#invisible_button img{
+	width:10px;
+	height: 10px;
+}
+
+#column_1{
+	width: 30px;
+	margin: 10px;
+}
+
+#left_column {
+	
+	width: 250px;
+	margin:10px;
+	vertical-align: top;
+	
+}
+#column_container {
+	background-color: white;
+	max-height: 629px;
+	padding: 5px;
+	border-radius: 5px;
+
+}
+#left_column div{
+	display: block;
+	vertical-align: top;
+}
+#right_column {
+	background-color: white;
+	padding:20px;
+	margin: 10px;
+	border-radius: 5px;
+	vertical-align: top;
+	width:auto;
+	font-family: "sansation";
+}
+
+#left_column img{
+	width: 100%;
+	height: auto;
+}
+
+.container {
+	display: table;
+	width: 100%;
+	border-collapse:separate; 
+	border-spacing: 20px; 
+}
+.accent_image_container{
+	display: inline-block;
+	height: 50;
+	width: auto;
+	float:right;
+	margin-top: 20px;
+}
+.accent_image_container img{
+	height: 100%;
+	width: auto;
+}
+.header h1{
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+
+@font-face {
+
+    font-family: "science_fair_bold";
+
+    src: local(science_fair), url('fonts/science_fair/science_fair.otf') format('opentype');
+
+}
+
+@font-face{
+	font-family: "sansation";
+	src: url('fonts/sansation/Sansation_Regular.otf') format('opentype');
+	src: url('fonts/sansation/Sansation_Regular.eot');
+	src: local('☺'), url('fonts/sansation/Sansation_Regular.woff') format('woff'), url('fonts/sansation/Sansation_Regular.ttf') format('truetype'), url('fonts/sansation/Sansation_Regular.svg') format('svg');
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image map</title>
+</head>
+<body>
+     <div>
+        <h1> Image maps with alt text </h1>
+        <map name="image-map">
+          <area shape="rect" coords="0,0,50,50" alt="Area 1" href="#" />
+          <area shape="rect" coords="50,50,100,100" alt="Area 2" href="#" />
+        </map>
+        <img
+          src="./Images/flow1.png"
+          usemap="#image-map"
+          alt="Image map with alt text"
+        />
+      </div>
+      <div>
+        <img src="./Images/exp1.jpeg" usemap="#image-map" alt="" />
+      </div> 
+
+
+     <div>
+        <h1> Image maps with alt text and without alt text </h1>
+        <map name="image-map">
+          <area shape="rect" coords="0,0,50,50" alt="Area 1" href="#" />
+          <area shape="rect" coords="50,50,100,100" href="#" />
+        </map>
+        <img
+          src="./Images/flow1.png"
+          usemap="#image-map"
+          alt="Image map with alt text"
+        />
+      </div>
+      <div>
+        <img src="./Images/exp1.jpeg" usemap="#image-map" alt="" />
+      </div>
+
+
+      <div>
+        <h1> Image maps without alt text </h1>
+        <map name="image-map">
+          <area shape="rect" coords="0,0,50,50"  href="#" />
+          <area shape="rect" coords="50,50,100,100"  href="#" />
+        </map>
+        <img
+          src="./Images/flow1.png"
+          usemap="#image-map"
+          alt="Image map with alt text"
+        />
+      </div>
+      <div>
+        <img src="./Images/exp1.jpeg" usemap="#image-map" alt="" />
+      </div> 
+
+
+     
+     <div>
+        <h1> Image maps with titles </h1>
+        <map name="image-map">
+          <area shape="rect" coords="0,0,50,50" title="Area 1" href="#" />
+          <area shape="rect" coords="50,50,100,100" title="Area 2" href="#" />
+        </map>
+        <img
+          src="./Images/flow1.png"
+          usemap="#image-map"
+          alt="Image map with alt text"
+        />
+      </div>
+      <div>
+        <img src="./Images/exp1.jpeg" usemap="#image-map" alt="" />
+      </div>
+
+
+      <div>
+        <h1> Image maps with aria-label </h1>
+        <map name="image-map">
+          <area shape="rect" coords="0,0,50,50" aria-label="Area 1" href="#" />
+          <area shape="rect" coords="50,50,100,100" aria-label="Area 2" href="#" />
+        </map>
+        <img
+          src="./Images/flow1.png"
+          usemap="#image-map"
+          alt="Image map with alt text"
+        />
+      </div>
+      <div>
+        <img src="./Images/exp1.jpeg" usemap="#image-map" alt="" />
+      </div>
+
+
+      <div>
+        <h1> Image maps with aria-label </h1>
+        <map name="image-map">
+          <area shape="rect" coords="0,0,50,50" aria-labelledby="area1" href="#" />
+          <area shape="rect" coords="50,50,100,100" aria-labelledby="area2" href="#" />
+        </map>
+        <img
+          src="./Images/flow1.png"
+          usemap="#image-map"
+          alt="Image map with alt text"
+        />
+      </div>
+      <label id="area1">
+        Area 1
+      </label>
+      <label id="area2">
+        Area 2
+      </label>
+      <div>
+        <img src="./Images/exp1.jpeg" usemap="#image-map" alt="" />
+      </div>
+      
+</body>
+</html>

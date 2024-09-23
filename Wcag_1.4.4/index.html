@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="/library/bundle.js"></script>
+    <meta charset="UTF-8" />
+    <title>Sample HTML for WCAG 1.4.4 Testing</title>
+    <style>
+      #container1 {
+        width: 500px;
+        border: 1px solid gray;
+        font-size: 2em;
+        /* Use em units for relative font size */
+        overflow: hidden;
+        display: inline-block;
+      }
+
+      #container {
+        width: 200px;
+        border: 1px solid gray;
+        overflow: hidden;
+        /* This property clips text that overflows the container */
+      }
+
+      .callout {
+        font-size: 2vh;
+        padding: 1vh;
+        background-color: #fee;
+        border: 1px #ccc solid;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <p>
+        This is a paragraph with text that can get clipped, truncated, or
+        obscured when resized. This is an example where text doesn't fit within
+        its container.
+      </p>
+    </div>
+    <p>
+      This is a paragraph with text that can get clipped, truncated, or
+      obscured when resized. This is an example where text doesn't fit within
+      its container.
+    </p>
+    <div id="container1">
+      <p style="font-size: 1em">
+        This is a paragraph with text that can get clipped, truncated, or
+        obscured when resized. This is an example where text doesn't fit within
+        its container.
+      </p>
+    </div>
+    <br/> 
+    <label for="fname">First Name</label
+    ><input type="text" name="fname" id="fname" />
+    <br />
+    <label for="lname">Last Name</label
+    ><input type="text" name="lname" id="lname" /><br />
+    <p class="callout">Text that scales by viewport units</p>
+  </body>
+  <script>
+    Audit.engine.ruleEngine(null,null,null,document)
+
+  </script>
+</html>

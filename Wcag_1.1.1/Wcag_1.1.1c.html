@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image link</title>
+</head>
+<body>
+    <div>
+        <h1>Linked image with alt text</h1>
+        <a href="https://www.amazon.com">
+          <img src="./Images/az.png" alt="Amazon link" />
+        </a>
+    </div>
+    
+
+    <div>
+        <h1>Linked image with alt text</h1>
+        <a href="https://www.amazon.com">
+          <img src="./Images/az.png" title="Amazon link" />
+        </a>
+    </div>
+
+    <div>
+        <h1>Linked image with aria-label</h1>
+        <a href="https://www.amazon.com">
+          <img src="./Images/az.png" aria-label="Amazon link" />
+        </a>
+    </div>
+
+    <div>
+        <h1>Linked image with aria-labelledby</h1>
+        <a href="https://www.amazon.com">
+          <img src="./Images/az.png" aria-labelledby="amazonLink" />
+        </a>
+        <label id="amazonLink">Amazon link</label>
+    </div>
+
+    <div>
+        <h1>Linked image without alt text</h1>
+        <a href="https://www.amazon.com">
+          <img src="./Images/az.png" />
+        </a>
+    </div>
+</body>
+</html>

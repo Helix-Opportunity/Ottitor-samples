@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Link Contrast Checker</title>
+    <style>
+      input[type='text'] {
+        background-color: #ffffff; /* Example background color */
+        border: 2px solid #ccc; /* Gray outline with insufficient contrast */
+        color: #007acc;
+      }
+      a {
+        color: #007acc; /* Example link text color */
+      }
+      a:hover,
+      a:active,
+      a:focus {
+        color: #ff6600; /* Example link text color on hover, active, and focus */
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#">Example Link</a>
+    <label for="text-input">Text Input:</label>
+    <input type="text" id="text-input" name="text-input" value="Sample Text" />
+    <div style="color: rgba(255, 0, 0, 0.5)">Hello, World!</div>
+  </body>
+</html>

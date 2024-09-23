@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessibility Examples</title>
+  </head>
+  <body>
+    <!-- Example 1: Accessibility Score 1 (Both Mouse and Keyboard Events) -->
+    <button id="exampleButton1">Click me</button>
+
+    <!-- Example 2: Accessibility Score 0 (No Mouse Event or Only Mouse Event) -->
+    <button id="exampleButton2">Click me</button>
+    <span
+      onclick="nextPage();"
+      onkeypress="nextPage();"
+      role="link"
+      tabindex="0"
+    >
+      <img alt="Go to next page" />
+    </span>
+    <span onclick="'newpage.html'"> Fake link </span>
+    <a
+      href="https://www.w3.org/WAI/"
+      onmouseover="updateImage('wai', true);"
+      onfocus="updateImage('wai', true);"
+      onmouseout="updateImage('wai',false);"
+      onblur="updateImage('wai',false);"
+    >
+      <img alt="" id="wai" src="greyplus.gif" />
+      W3C Web Accessibility Initiative</a
+    >
+    &amp;
+    <p>
+      <img
+        src="bargain.jpg"
+        tabindex="0"
+        alt="View Bargains"
+        onclick="doNav('viewbargains.html');"
+        onkeypress="doKeyPress('viewbargains.html');"
+      />
+    </p>
+    <input
+      type="submit"
+      value="Submit"
+      onFocus="changeColor(this);"
+      onBlur="restoreColor(this);"
+    />
+    <script>
+      // Modify the prototype before attaching event listeners
+      EventTarget.prototype._addEventListener =
+        EventTarget.prototype.addEventListener;
+
+      EventTarget.prototype.addEventListener = function (
+        type,
+        listener,
+        options
+      ) {
+        if (options === undefined) {
+          options = false;
+        }
+
+        this._addEventListener(type, listener, options);
+        if (!this.eventListenerList) {
+          this.eventListenerList = {};
+        }
+        if (!this.eventListenerList[type]) {
+          this.eventListenerList[type] = [];
+        }
+        this.eventListenerList[type].push({
+          listener: listener,
+          options: options,
+        });
+        console.log(`Added listener for type '${type}' to element`, this);
+      };
+
+      EventTarget.prototype._getEventListeners = function (type) {
+        if (!this.eventListenerList) this.eventListenerList = {};
+        return type === undefined
+          ? this.eventListenerList
+          : this.eventListenerList[type];
+      };
+
+      const button1 = document.getElementById('exampleButton1');
+      button1.addEventListener('mouseover', function handleMouseOver() {
+        console.log('Mouse over event for button1');
+      });
+      button1.addEventListener('keydown', function handleKeyDown() {
+        console.log('Key down event for button1');
+      });
+
+      const button2 = document.getElementById('exampleButton2');
+      button2.addEventListener('mouseover', function handleMouseOver() {
+        console.log('Mouse over event for button2');
+      });
+
+      const elementsWithListeners = [];
+
+      function listAllEventListeners() {
+        const allElements = Array.from(document.querySelectorAll('*'));
+        allElements.push(document);
+        allElements.push(window);
+
+        for (let currentElement of allElements) {
+          if (typeof currentElement._getEventListeners === 'function') {
+            const listeners = currentElement._getEventListeners();
+            if (Object.keys(listeners).length) {
+              elementsWithListeners.push({
+                node: currentElement,
+                listeners: listeners,
+              });
+              console.log(`Found event listeners for element`, currentElement);
+            }
+          }
+        }
+
+        return elementsWithListeners;
+      }
+      function doNav(url) {
+        window.location.href = url;
+      }
+
+      function doKeyPress(url) {
+        //if the enter key was pressed
+        if (window.event.type == 'keypress' && window.event.keyCode == 13) {
+          doNav(url);
+        }
+      }
+      console.log(listAllEventListeners());
+    </script>
+  </body>
+</html>

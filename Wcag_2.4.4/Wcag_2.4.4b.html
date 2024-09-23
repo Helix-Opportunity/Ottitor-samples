@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image map</title>
+  </head>
+  <body>
+    <div>
+      <h1>Image maps with alt text</h1>
+      <img
+        src="welcome.gif"
+        usemap="#map1"
+        alt="Areas in the library. Select an area for
+    more information on that area."
+      />
+      <map id="map1" name="map1">
+        <area
+          shape="rect"
+          coords="0,0,30,30"
+          href="reference.html"
+          alt="Reference"
+        />
+        <area
+          shape="rect"
+          coords="34,34,100,100"
+          href="media.html"
+          alt="Audio visual lab"
+        />
+      </map>
+
+      <img src="diagram.png" alt="Diagram of a process" usemap="#processmap" />
+      <map name="processmap">
+        <area shape="rect" coords="0,0,50,50" alt="Step 1: Begin" />
+        <area shape="rect" coords="50,0,100,50" alt="Step 2: Middle" />
+        <area shape="rect" coords="0,50,100,100" alt="Step 3: End" />
+      </map>
+    </div>
+  </body>
+</html>

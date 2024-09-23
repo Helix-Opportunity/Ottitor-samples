@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image alt text</title>
+</head>
+<body>
+      <!-- Image -->
+      <div>
+        <h1>With alt</h1>
+        <img
+          style="display: inline"
+          src="./Images/image.png"
+          alt="Benzene ring image"
+        />
+      </div>
+      <div>
+        <h1>With short alt</h1>
+        <img
+          style="display: inline"
+          src="./Images/image.png"
+          alt="Benz"
+        />
+      </div>
+      <div>
+        <h1>With title</h1>
+        <img
+          style="display: inline"
+          src="./Images/image.png"
+          title="Benzene ring image"
+        />
+      </div>
+
+      <div>
+        <h1>With aria-label</h1>
+        <img
+          style="display: inline"
+          src="./Images/image.png"
+          aria-label="Benzene ring image"
+        />
+      </div>
+
+      <div>
+        <h1>With aria-labelledby</h1>
+        <img
+          style="display: inline"
+          src="./Images/image.png"
+          aria-labelledby="imgname"
+        />
+        <label id="imgname">Benzene ring image</label>
+      </div>
+
+      <div>
+        <h1>Without attribute</h1>
+        <img
+          style="display: inline"
+          src="./Images/image.png"
+        />
+      </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video accessibility</title>
+</head>
+<body>
+  <div>
+    <video controls width="400" style="display: inline" >
+      <source src="./Videos/Forgetful Kitchen - Ad.mp4" alt="" type="video/mp4" />
+      <a href="alternative-video-description.html">Alternative Video Description</a>
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <video id="video" controls preload="metadata"><source src="video/sintel-short.mp4" type="video/mp4" /><track  label="English"  kind="captions"  srclang="en"  src="captions/vtt/sintel-en.vtt"   default/></video>
+    <video poster="myvideo.png" controls>
+      <source src="myvideo.mp4" srclang="en" type="video/mp4">
+      <source src="myvideo.webm" srclang="fr" type="video/webm">
+      <track src="myvideo_en.vtt" kind="descriptions" srclang="en" label="English">
+      <track src="myvideo_fr.vtt" kind="descriptions" srclang="fr" label="French">
+    </video>
+    <video poster="myvideo.png" controls>
+      <source src="myvideo.mp4" srclang="en" type="video/mp4">
+      <track src="myvideo_en.vtt" kind="descriptions" srclang="en" label="English">
+    </video>
+</body>
+</html>

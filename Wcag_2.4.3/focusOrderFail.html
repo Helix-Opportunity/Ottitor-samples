@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focusable Elements Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .focusable {
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #000;
+      display: inline-block;
+      text-align: center;
+    }
+    header, main, footer {
+      margin-bottom: 20px;
+    }
+    header nav {
+      display: flex;
+      justify-content: space-around;
+    }
+    header nav a {
+      flex: 1;
+    }
+    pre {
+      display: block;
+      width: calc(100% - 42px);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="#" class="focusable" id="logo">Logo</a>
+    <nav>
+      <a href="#" class="focusable o-navlink" id="nav1">Nav 1</a>
+      <a href="#" class="focusable o-navlink" id="nav2">Nav 2</a>
+      <a href="#" class="focusable o-navlink" id="nav3">Nav 3</a>
+      <a href="#" class="focusable o-navlink" id="nav4">Nav 4</a>
+      <a href="#" class="focusable o-navlink" id="nav5">Nav 5</a>
+    </nav>
+    <button class="focusable c-main-nav__toggle" id="menuToggle">Toggle Menu</button>
+  </header>
+  
+  <main>
+    <pre class="focusable astro-code dracula" tabindex="1" id="code1">Code Block 1</pre>
+    <pre class="focusable astro-code dracula" tabindex="2" id="code2">Code Block 2</pre>
+    <pre class="focusable astro-code dracula" tabindex="3" id="code3">Code Block 3</pre>
+    <pre class="focusable astro-code dracula" tabindex="4" id="code4">Code Block 4</pre>
+    
+    <a href="#" class="focusable button" id="button1">Button 1</a>
+    <a href="#" class="focusable button" id="button2">Button 2</a>
+    <a href="#" class="focusable button" id="button3">Button 3</a>
+    <a href="#" class="focusable button" id="button4">Button 4</a>
+    
+    <a href="#" class="focusable" id="link1">Link 1</a>
+    <a href="#" class="focusable" id="link2">Link 2</a>
+    <a href="#" class="focusable" id="link3">Link 3</a>
+    <a href="#" class="focusable" id="link4">Link 4</a>
+    <a href="#" class="focusable" id="link5">Link 5</a>
+    <a href="#" class="focusable" id="link6">Link 6</a>
+  </main>
+
+  <footer>
+    <a href="#" class="focusable" id="footerLink1">Footer Link 1</a>
+    <a href="#" class="focusable" id="footerLink2">Footer Link 2</a>
+  </footer>
+</body>
+</html>

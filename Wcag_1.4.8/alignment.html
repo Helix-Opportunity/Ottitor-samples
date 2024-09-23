@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/library/bundle.js"></script>
+    <style>
+      .left-aligned {
+        text-align: left;
+      }
+
+      .right-aligned {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="left-aligned">Lorem ipsum dolor sit ...</p>
+    <p class="right-aligned">Lorem ipsum dolor sit ...</p>
+    <div style="text-align: left">This is left-aligned.</div>
+    <div style="text-align: right">This is right-aligned.</div>
+    <div>This element does not have text-align property.</div>
+    <img src="https://via.placeholder.com/300" />
+    <script>
+      Audit.engine.ruleEngine(null, Audit.browserParser, null, document);
+    </script>
+  </body>
+</html>

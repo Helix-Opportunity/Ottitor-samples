@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <script src="../library/bundle.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <head>
+    <title>Sample HTML Page</title>
+  </head>
+  <body>
+    <div id="capture1" style="padding: 0px; background: #f5da55">
+      <h4 style="color: #000">Hello worl!</h4>
+    </div>
+    <div id="capture2" style="padding: 0px; background: #f5da55">
+      <h4 style="color: #fff">Hello world</h4>
+</div>
+</body>
+<script src="./pixel.js">
+</script>
+  <script>
+    let canvas1 = html2canvas(document.getElementById('capture1')).then(
+
+      (c) => (canvas1 = c)
+    );
+    let canvas2 = html2canvas(document.getElementById('capture2')).then(
+      (c) => (canvas2 = c)
+    );
+    // Assuming canvas1 and canvas2 are already defined as Promises from html2canvas
+
+    Promise.all([canvas1, canvas2]).then(([c1, c2]) => {
+      // Get 2D contexts
+      const ctx1 = c1.getContext('2d', {
+        antialias: false,
+      });
+
+      ctx1.imageSmoothingEnabled = false;
+      const ctx2 = c2.getContext('2d', {
+        antialias: false,
+      });
+      ctx2.imageSmoothingEnabled = false;
+      // Get image data
+      
+      const imageData1 = ctx1.getImageData(0, 0, c1.width, c1.height);
+      const imageData2 = ctx2.getImageData(0, 0, c2.width, c2.height);
+      // Compare pixel data
+      const pixelData1 = imageData1.data;
+      const pixelData2 = imageData2.data;
+
+      let differences = 0;
+
+      for (let i = 0; i < pixelData1.length; i += 4) {
+        // Compare each RGBA component
+        if (
+          pixelData1[i] !== pixelData2[i] ||
+          pixelData1[i + 1] !== pixelData2[i + 1] ||
+          pixelData1[i + 2] !== pixelData2[i + 2] ||
+          pixelData1[i + 3] !== pixelData2[i + 3]
+        ) {
+          differences++;
+        }
+      }
+
+      console.log(`Number of pixel differences: ${differences}`);
+    });
+  </script>
+</html>
